@@ -8,4 +8,9 @@ h5 {
 
 h6 {
   font-weight: normal;
+  margin-bottom: 0;
+}
+
+header + h6 {
+  margin-top: 0;
 }
