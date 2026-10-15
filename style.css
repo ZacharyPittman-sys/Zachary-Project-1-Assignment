@@ -5,3 +5,7 @@ h5 + p {
 h5 {
   margin-bottom: 0;
 }
+
+h6 {
+  font-weight: normal;
+}
