@@ -20,7 +20,6 @@ h1 {
 display: grid;
 grid-auto-flow: column; 
 grid-auto-columns: max-content;
-grid-template-columns: repeat(1, 75px);
 width: 75px;
 background-color: orange;
 padding: 2px;
