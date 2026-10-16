@@ -15,7 +15,7 @@ h1 {
   margin-bottom: 0;
 }
 
-<!-- Learned from https://www.w3schools.com/css/css_grid.asp -->
+/* Learned from https://www.w3schools.com/css/css_grid.asp */
 .container {
 display: grid;
 grid-auto-flow: column; 
