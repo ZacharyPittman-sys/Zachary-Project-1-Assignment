@@ -18,7 +18,7 @@ h1 {
 <!-- Learned from https://www.w3schools.com/css/css_grid.asp -->
 .container {
 display: grid;
-grid-template-columns: (1, 75px);
+grid-template-columns: repeat(1, 75px);
 max-width: 75px;
 background-color: orange;
 padding: 2px;
