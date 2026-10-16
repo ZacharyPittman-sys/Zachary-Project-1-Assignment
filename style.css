@@ -18,8 +18,7 @@ h1 {
 /* Learned from https://www.w3schools.com/css/css_grid.asp */
 .container {
 display: grid;
-grid-auto-flow: column; 
-grid-auto-columns: minmax(min-content, max-content);
+grid-template-columns: 1fr;
 width: fit-content;
 max-width: 100%;
 background-color: orange;
