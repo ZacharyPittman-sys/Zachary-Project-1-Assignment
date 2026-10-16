@@ -22,13 +22,13 @@ grid-auto-flow: column;
 grid-auto-columns: max-content;
 max-width: 120px;
 background-color: orange;
-padding: 3px;
+padding: 2px;
 }
 
 .container div {
 background-color: white;
-border: 1px solid black;
-padding: 3px;
+border: 2px solid black;
+padding: 2px;
 font-size: 15px;
 text-align: left;
 }
