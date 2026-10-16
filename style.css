@@ -29,7 +29,7 @@ padding: 2px;
 .container div {
 background-color: white;
 border: 2px solid black;
-max-width: 110%;
+max-width: 110px;
 padding: 2px;
 font-size: 15px;
 text-align: left;
