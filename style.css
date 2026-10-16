@@ -22,3 +22,11 @@ grid-template-columns: auto;
 background-color: orange;
 padding: 10px;
 }
+
+.container div {
+background-color: white;
+border: 2px solid black;
+padding: 10px;
+font-size: 15px;
+text-align: left;
+}
