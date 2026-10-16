@@ -21,7 +21,7 @@ display: grid;
 grid-auto-flow: column; 
 grid-auto-columns: minmax(min-content, max-content);
 width: fit-content;
-max-width: 25%;
+max-width: 100%;
 background-color: orange;
 padding: 2px;
 }
@@ -29,7 +29,7 @@ padding: 2px;
 .container div {
 background-color: white;
 border: 2px solid black;
-max-width: 25%;
+max-width: 110%;
 padding: 2px;
 font-size: 15px;
 text-align: left;
