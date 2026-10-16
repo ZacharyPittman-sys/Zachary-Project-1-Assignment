@@ -20,7 +20,7 @@ h1 {
 display: grid;
 grid-auto-flow: column; 
 grid-auto-columns: max-content;
-width: fit-content;
+max-width: 120px;
 background-color: orange;
 padding: 2px;
 }
