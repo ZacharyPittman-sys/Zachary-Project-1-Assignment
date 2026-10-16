@@ -20,6 +20,7 @@ h1 {
 display: grid;
 grid-template-columns: auto;
 max-width: 100px;
+max-length: 500px;
 background-color: orange;
 padding: 2px;
 }
