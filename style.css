@@ -21,7 +21,7 @@ display: grid;
 grid-template-columns: 1fr;
 width: fit-content;
 max-width: 100%;
-background-color: #bfeffff;
+background-color: #bfefff;
 padding: 2px;
 }
 
