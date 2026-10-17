@@ -21,6 +21,9 @@ background-color: #bfefff;
 padding: 2px;
 }
 
+p.name {
+margin-top: 0;
+}
 .container div {
 background-color: white;
 border: 2px solid black;
