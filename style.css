@@ -54,3 +54,7 @@ img.founder {
 width: 100px;
 height: 100px;
 }
+
+a.top {
+font-weight: bold;
+}
