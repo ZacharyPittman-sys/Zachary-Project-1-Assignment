@@ -45,6 +45,6 @@ font-weight: bold;
 font-style: italic;
 }
 
-table, th, td {
+table + th + td {
 border: 1px #bfefff;
 }
