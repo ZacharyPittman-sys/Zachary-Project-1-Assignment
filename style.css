@@ -58,3 +58,7 @@ height: 100px;
 a.top {
 font-weight: bold;
 }
+
+a.bottom {
+text-decoration: none;
+}
