@@ -38,3 +38,8 @@ font-family: "Times New Roman",sans-serif
 .container div:hover {
 background-color: gray;
 }
+
+th {
+font-weight: bold;
+font-style: italic;
+}
