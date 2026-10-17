@@ -45,6 +45,9 @@ font-weight: bold;
 font-style: italic;
 }
 
-table + th + td {
+table {
+border-collapse: collapse;
+}
+table, th, td {
 border: 1px #bfefff;
 }
