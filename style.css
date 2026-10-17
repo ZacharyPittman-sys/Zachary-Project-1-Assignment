@@ -55,6 +55,7 @@ width: 100px;
 height: 100px;
 }
 
+/* top and bottom are for links in Table of Content */
 a.top {
 font-weight: bold;
 }
