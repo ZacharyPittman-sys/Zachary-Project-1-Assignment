@@ -21,7 +21,7 @@
       
       <div><a href="reference.html">Reference Page</a></div>
       
-      <div><a href="key-topic.html">Key Topics / Vocalulary</a></div>
+      <div><a href="key-topic.html">Key Topics / Vocabulary</a></div>
       
       <div><a href="about-page.html">About</a></div>
 
@@ -37,26 +37,44 @@
     <h3>Quiz</h3>
     <p>Who created the first webpage?</p>
     <form id="quiz">
-  <input type="radio" id="timlee" name="first_Webpage" value="Tim Burners-Lee">
-  <label for="timlee">Tim Burners-Lee</label><br>
+  <input type="radio" id="timlee" name="first_Webpage" value="Tim Berners-Lee">
+  <label for="timlee">Tim Berners-Lee</label>
+      <br>
   <input type="radio" id="paul" name="first_Webpage" value="Dr. Paul Mockapetris">
-  <label for="paul">Dr. Paul Mockapetris</label><br>
+  <label for="paul">Dr. Paul Mockapetris</label>
+      <br>
   <input type="submit" value="Submit">
+      
     </form>
+
+    <p id="result"></p>
 
     
 <script>
-let answerCount = 0;
+let numCount = 0;
 const numQuestions = 10;
   const quizAnswers = {
-    q1: { correct: "Tim Berners-Lee", points: 1 },
+    first_Webpage: { correct: "Tim Berners-Lee", points: 1 },
     q2: { correct: "Hyper Text Markup Language", points: 1 },
     q3: { correct: "Dr. Paul Mockapetris", points: 1 }
   };
   
  document.getElementById("quiz").addEventListener("submit", function(event) {
    event.preventDefault();
+
+numCount = 0;
+
+   //This goes over each question to give you the number of questions you got correct
    
+for (let question in quizAnswers) {
+      const selected = document.querySelector(`input[name="${question}"]:checked`);
+
+      if (selected && selected.value === quizAnswers[question].correct) {
+        numCount += quizAnswers[question].points;
+      }
+    }
+   
+   document.getElementById("result").textContent = `You scored ${numCount} out of ${numQuestions}!`;
  });
  
   
