@@ -56,6 +56,26 @@
       <input type="radio" id="javascript" name="language" value="Javascript">
       <label for="javascript">Javascript</label>
         </div>
+      <br>
+      <div class="question">
+    <p>3. What is the protocol in the name https://www.google.com?</p>
+        <input type="radio" id="https://" name="parts" value="https://">
+        <label for="https://">https://</label>
+        <br>
+        <input type="radio" id="www" name="parts" value="www">
+        <label for="www">www</label>
+        <br>
+        <input type="radio" id="google" name="parts" value="google">
+        <label for="google">google</label>
+        <br>
+        <input type="radio" id=".com" name="parts" value=".com">
+        <label for=".com">.com</label>
+      </div>
+      <br>
+      
+
+
+          
   <input type="submit" value="Submit">
       
     </form>
@@ -69,7 +89,7 @@ const numQuestions = 10;
   const quizAnswers = {
     first_Webpage: { correct: "Tim Berners-Lee", points: 1 },
     language: { correct: "Hyper Text Markup Language", points: 1 },
-    q3: { correct: "Dr. Paul Mockapetris", points: 1 }
+    parts: { correct: "http://", points: 1 }
   };
   
  document.getElementById("quiz").addEventListener("submit", function(event) {
