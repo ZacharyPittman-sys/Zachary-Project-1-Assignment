@@ -36,6 +36,8 @@
     <br>
     <h3>Quiz</h3>
     <form id="quiz">
+
+      
     <div class="question">
     <p>1. Who created the first webpage?</p>
   <input type="radio" id="timlee" name="first_Webpage" value="Tim Berners-Lee">
@@ -45,18 +47,22 @@
   <label for="paul">Dr. Paul Mockapetris</label>
     </div>
     <br>
+
+      
     <div class="question">
   <p>2. What is the coding language used to make content display?</p>
-      <input type="radio" id="html" name="language" value="HTML">
+      <input type="radio" id="html" name="language" value="html">
       <label for="html">HTML</label>
       <br>
-      <input type="radio" id="css" name="language" value="CSS">
+      <input type="radio" id="css" name="language" value="css">
       <label for="css">CSS</label>
       <br>
-      <input type="radio" id="javascript" name="language" value="Javascript">
+      <input type="radio" id="javascript" name="language" value="javascript">
       <label for="javascript">Javascript</label>
         </div>
       <br>
+
+      
       <div class="question">
     <p>3. What is the protocol in the name https://www.google.com?</p>
         <input type="radio" id="https://" name="parts" value="https://">
@@ -72,10 +78,31 @@
         <label for=".com">.com</label>
       </div>
       <br>
+
       
+      <div class="question">
+    <p>4. Which URL contains only part of the full URL? </p>
+      <input type="radio" id="absolute" name="url" value="absolute">
+      <label for="absolute">Absolute URL</label>
+      <br>
+      <input type="radio" id="relative" name="url" value="relative">
+      <label for="relative">Relative URL</label>
+      </div>
+      <br>
 
 
-          
+      <div class="question">
+    <p>5. True or False, URL came before DNS? </p>
+      <input type="radio" id="true" name="dns" value="true">
+      <label for="true">True</label>
+      <br>
+      <input type="radio" id="false" name="dns" value="false">
+      <label for="false">False</label>
+      </div>
+      <br>
+
+
+        
   <input type="submit" value="Submit">
       
     </form>
@@ -88,8 +115,10 @@ let numCount = 0;
 const numQuestions = 10;
   const quizAnswers = {
     first_Webpage: { correct: "Tim Berners-Lee", points: 1 },
-    language: { correct: "Hyper Text Markup Language", points: 1 },
-    parts: { correct: "http://", points: 1 }
+    language: { correct: "html", points: 1 },
+    parts: { correct: "https://", points: 1 },
+    url: { correct: "relative", points: 1 },
+    dns: { correct: "false", points: 1 }
   };
   
  document.getElementById("quiz").addEventListener("submit", function(event) {
