@@ -104,17 +104,17 @@
   
       <div class="question">
     <p>6. Which part of the URL tells what type of website it is? </p>
-        <input type="radio" id="https://" name="top" value="https://">
-        <label for="https://">https://</label>
+        <input type="radio" id="https://2" name="top" value="https://2">
+        <label for="https://2">https://</label>
         <br>
-        <input type="radio" id="www" name="top" value="www">
-        <label for="www">www</label>
+        <input type="radio" id="www2" name="top" value="www2">
+        <label for="www2">www</label>
         <br>
-        <input type="radio" id="google" name="top" value="google">
-        <label for="google">google</label>
+        <input type="radio" id="google2" name="top" value="google2">
+        <label for="google2">google</label>
         <br>
-        <input type="radio" id=".com" name="top" value=".com">
-        <label for=".com">.com</label>
+        <input type="radio" id=".com2" name="top" value=".com2">
+        <label for=".com2">.com</label>
       </div>
       <br>
 
@@ -129,6 +129,7 @@
     </div>
     <br>
 
+      
     <div class="question">
     <label for="blank">8. What does WWW stand for? </label>
     <br>
@@ -143,6 +144,25 @@
       <input type="text" id="blanks" name="blanks">
     </div>
       <br>
+
+
+      <div class="question">
+        <p>10. What Organizations did Tim Berners-Lee work with? </p>
+        <input type="checkbox" id="wwworg" name="timjob" value="wwworg">
+        <label for="wwworg">World Wide Web Consortium</label>
+        <br>
+        <input type="checkbox" id="microsoft" name="timjob" value="microsoft">
+        <label for="microsoft">Microsoft</label>
+        <br>
+        <input type="checkbox" id="alphabet_inc" name="timjob" value="alphabet_inc">
+        <label for="alphabet_inc">Alphabet Inc.</label>
+        <br>
+        <input type="checkbox" id="web_trust" name="timjob" value="web_trust">
+        <label for="web_trust">Web Science Trust</label>
+      </div>
+      <br>
+
+      
   <input type="submit" value="Submit">
       
     </form>
@@ -159,11 +179,11 @@ const numQuestions = 10;
     parts: { correct: "https://", points: 1 },
     url: { correct: "relative", points: 1 },
     dns: { correct: "false", points: 1 },
-    top: { correct: ".com", points: 1 },
+    top: { correct: ".com2", points: 1 },
     dns_Creation: { correct: "Dr. Paul Mockapetris", points: 1 },
     blank: { correct: "World Wide Web", points: 1 },
     blanks: { correct: "Domain Name System", points: 1 },
-    
+    timjob: { correct: "wwworg" && "web_trust", points: 1}
     
   };
   
