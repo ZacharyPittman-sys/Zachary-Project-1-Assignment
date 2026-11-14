@@ -78,3 +78,9 @@ font-style: italic;
 color: cyan;
 }
 
+.readText {
+max-width: 800px;
+padding: 0 20;
+line-height: 1.6;
+margin: 0 auto;
+}
