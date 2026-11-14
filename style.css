@@ -71,3 +71,9 @@ font-decoration: none;
 .fail-color {
   color: red;
 }
+
+h3.section {
+font-weight: bold;
+font-style: italic;
+color: cyan;
+}
