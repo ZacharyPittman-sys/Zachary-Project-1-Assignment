@@ -247,9 +247,9 @@ const feedbackEl = anyInput.closest(".question").querySelector(".feedback");
     if (!Array.isArray(correctAnswer) && !document.querySelector(`input[name="${question}"][type="text"]`)) {
       if (selected && selected.value === quizAnswers[question].correct) {
         numCount += quizAnswers[question].points;
-        feedbackEl.textContent = "You got it Right!";
+        feedbackEl.innerHTML = `<span class="pass-color">You got it Right!</span>`;
       } else {
-        feedbackEl.textContent = `You got it Wrong! The answer was ${correctAnswer}.`;
+        feedbackEl.innerHTML = `<span class="fail-color">You got it Wrong! The answer was ${correctAnswer}.</span>`;
     }
     }
 
@@ -260,9 +260,9 @@ const feedbackEl = anyInput.closest(".question").querySelector(".feedback");
     const textInput = document.querySelector(`input[name="${question}"]`);
     if (textInput && textInput.value.trim().toLowerCase() === correctAnswer.toLowerCase()) {
       numCount += points;
-      feedbackEl.textContent = "You got it Right!";
+       feedbackEl.innerHTML = `<span class="pass-color">You got it Right!</span>`;
     } else {
-      feedbackEl.textContent = `You got it Wrong! The answer was ${correctAnswer}.`;
+      feedbackEl.innerHTML = `<span class="fail-color">You got it Wrong! The answer was ${correctAnswer}.</span>`;
     }
   } 
   
@@ -277,9 +277,9 @@ const feedbackEl = anyInput.closest(".question").querySelector(".feedback");
 
         if (isAllCorrect) {
           numCount += points;
-          feedbackEl.textContent = "You got it Right!";
+           feedbackEl.innerHTML = `<span class="pass-color">You got it Right!</span>`;
         } else {
-          feedbackEl.textContent = "You got it Wrong! The answer is World Wide Web Consortium and Web Science Trust.";
+          feedbackEl.innerHTML = `<span class="fail-color">You got it Wrong! The answer is World Wide Web Consortium and Web Science Trust.</span>`;
         }
       } 
   
