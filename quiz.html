@@ -200,7 +200,9 @@ const numQuestions = 10;
   clearTimeout(quizTimer);
   quizTimer = setTimeout(timeMachine, timeLimit);
 
-  
+  document.querySelectorAll("#quiz input").forEach(function(input) {
+    input.disabled = false;
+  });
 });
   
  document.getElementById("quiz").addEventListener("submit", function(event) {
