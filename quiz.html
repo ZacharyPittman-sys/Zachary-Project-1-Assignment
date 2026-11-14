@@ -211,6 +211,14 @@ for (let question in quizAnswers) {
        const correctAnswer = quizAnswers[question].correct;
  const points = quizAnswers[question].points;  
 
+// question 8 and 9 part
+    if (document.querySelector(`input[name="${question}"][type="text"]`)) {
+    const textInput = document.querySelector(`input[name="${question}"]`);
+    if (textInput && textInput.value.trim().toLowerCase() === correctAnswer.toLowerCase()) {
+      numCount += points;
+    }
+  } 
+  
   // question 10 part
  if (Array.isArray(correctAnswer)) {
         const checkedBoxes = document.querySelectorAll(`input[name="${question}"]:checked`);
@@ -224,13 +232,7 @@ for (let question in quizAnswers) {
           numCount += points;
         }
       } 
-  // question 8 and 9 part
-    if (document.querySelector(`input[name="${question}"][type="text"]`)) {
-    const textInput = document.querySelector(`input[name="${question}"]`);
-    if (textInput && textInput.value.trim().toLowerCase() === correctAnswer.toLowerCase()) {
-      numCount += points;
-    }
-  } 
+  
     }
    
    document.getElementById("result").textContent = `You got ${numCount} right and ${numQuestions - numCount} questions wrong!`;
