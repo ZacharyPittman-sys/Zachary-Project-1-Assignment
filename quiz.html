@@ -186,7 +186,10 @@ const numQuestions = 10;
     timjob: { correct: ["wwworg", "web_trust"], points: 1}
     
   };
-  
+  document.getElementById("quiz").addEventListener("reset", function() {
+  numCount = 0;
+  document.getElementById("result").textContent = "";
+});
  document.getElementById("quiz").addEventListener("submit", function(event) {
    event.preventDefault();
 
