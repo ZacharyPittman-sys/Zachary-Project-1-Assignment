@@ -37,7 +37,7 @@
     <h3>Quiz</h3>
     <form id="quiz">
 
-      
+    <!-- This is the multiple choice (1 to 7) -->
     <div class="question">
     <p>1. Who created the first webpage?</p>
   <input type="radio" id="timlee" name="first_Webpage" value="Tim Berners-Lee">
@@ -129,7 +129,7 @@
     </div>
     <br>
 
-      
+    <!-- These are the blank questions (8 and 9) -->
     <div class="question">
     <label for="blank">8. What does WWW stand for? </label>
     <br>
@@ -145,7 +145,7 @@
     </div>
       <br>
 
-
+      <!-- This is the multiple choice question -->
       <div class="question">
         <p>10. What Organizations did Tim Berners-Lee work with? </p>
         <input type="checkbox" id="wwworg" name="timjob" value="wwworg">
@@ -178,7 +178,7 @@ let startTime = Date.now();
   
 let numCount = 0;
 const numQuestions = 10;
-  
+  // These are the answers to the quiz! (no peaking!)
   const quizAnswers = {
     first_Webpage: { correct: "Tim Berners-Lee", points: 1 },
     language: { correct: "html", points: 1 },
@@ -192,7 +192,7 @@ const numQuestions = 10;
     timjob: { correct: ["wwworg", "web_trust"], points: 1}
     
   };
-  
+  // This goes over the reset button and resets both the timer and the text at the bottom as to keep my website clean!
   document.getElementById("quiz").addEventListener("reset", function() {
   numCount = 0;
   document.getElementById("result").textContent = "";
@@ -204,13 +204,14 @@ const numQuestions = 10;
     input.disabled = false;
   });
 });
-  
+  // This goes over the submit button and stops the timer as well as showing the remaining time and the time that passed since you begun.
  document.getElementById("quiz").addEventListener("submit", function(event) {
    event.preventDefault();
    
    const timePassed = Date.now() - startTime;
 const timeRemaining = timeLimit - timePassed;
-   
+
+   // This turns off your inputs so you can't change your answers after seeing the results without pressing the reset button!
    const allInputs = document.querySelectorAll("#quiz input");
    allInputs.forEach(function(input) {
     if (input.type !== "reset") {
@@ -254,6 +255,7 @@ for (let question in quizAnswers) {
       } 
   
     }
+   // This goes over the results of the quiz
    if (numCount > 5) {
    document.getElementById("result").innerHTML = `<span class="pass-color">You pass!</span>`;
    } else {
