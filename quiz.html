@@ -220,6 +220,7 @@ for (let question in quizAnswers) {
           numCount += points;
         }
       } 
+  // question 8 and 9 part
     if (document.querySelector(`input[name="${question}"][type="text"]`)) {
     const textInput = document.querySelector(`input[name="${question}"]`);
     if (textInput && textInput.value.trim().toLowerCase() === correctAnswer.toLowerCase()) {
@@ -228,7 +229,7 @@ for (let question in quizAnswers) {
   } 
     }
    
-   document.getElementById("result").textContent = `You scored ${numCount} out of ${numQuestions}!`;
+   document.getElementById("result").textContent = `You got ${numCount} out of ${numQuestions} questions correct!`;
  });
  
   
