@@ -72,8 +72,9 @@ font-decoration: none;
   color: red;
 }
 
-h3.section {
+.section {
 font-weight: bold;
 font-style: italic;
 color: cyan;
 }
+
