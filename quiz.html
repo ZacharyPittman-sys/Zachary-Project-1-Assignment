@@ -163,7 +163,7 @@
       <br>
 
       
-  <input type="submit" value="Submit">
+  <input type="submit" id="overTime" value="Submit">
   <input type="reset" value="Reset">
     </form>
 
@@ -171,8 +171,10 @@
 
     
 <script>
+  
 let numCount = 0;
 const numQuestions = 10;
+  
   const quizAnswers = {
     first_Webpage: { correct: "Tim Berners-Lee", points: 1 },
     language: { correct: "html", points: 1 },
@@ -186,10 +188,12 @@ const numQuestions = 10;
     timjob: { correct: ["wwworg", "web_trust"], points: 1}
     
   };
+  
   document.getElementById("quiz").addEventListener("reset", function() {
   numCount = 0;
   document.getElementById("result").textContent = "";
 });
+  
  document.getElementById("quiz").addEventListener("submit", function(event) {
    event.preventDefault();
 
@@ -232,6 +236,12 @@ for (let question in quizAnswers) {
    document.getElementById("result").textContent = `You got ${numCount} out of ${numQuestions} questions correct!`;
  });
  
+
+setTimeout(timeMachine, 600000);
+function timeMachine() {
+   document.getElementById("overTime").click();
+}
+
   
 </script>
 
