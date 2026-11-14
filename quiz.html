@@ -172,7 +172,7 @@
     
 <script>
 let timeLimit = 600000;
-const startTime = Date.now();
+let startTime = Date.now();
 
 
   
@@ -196,6 +196,9 @@ const numQuestions = 10;
   document.getElementById("quiz").addEventListener("reset", function() {
   numCount = 0;
   document.getElementById("result").textContent = "";
+  startTime = Date.now();
+  cleartimeOut(quizTimer);
+  quizTimer = setTimeout(timeMachine, timeLimit);
 });
   
  document.getElementById("quiz").addEventListener("submit", function(event) {
@@ -249,7 +252,7 @@ for (let question in quizAnswers) {
  
 
   
-setTimeout(timeMachine, timeLimit);
+let quizTimer = setTimeout(timeMachine, timeLimit);
 function timeMachine() {
   
    document.getElementById("overTime").click();
