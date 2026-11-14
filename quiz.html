@@ -237,10 +237,17 @@ numCount = 0;
 for (let question in quizAnswers) {
       const selected = document.querySelector(`input[name="${question}"]:checked`);
 
+
+    if (!Array.isArray(correctAnswer) && !document.querySelector(`input[name="${question}"][type="text"]`)) {
       if (selected && selected.value === quizAnswers[question].correct) {
         numCount += quizAnswers[question].points;
-      }
+        feedbackEl.textContent = "You got it Right!";
+      } else {
+        feedbackEl.textContent = `You got it Wrong! The answer was ${correctAnswer}.`;
+    }
+    }
 
+  
        const correctAnswer = quizAnswers[question].correct;
  const points = quizAnswers[question].points;  
 
