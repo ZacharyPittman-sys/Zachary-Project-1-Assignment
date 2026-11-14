@@ -171,6 +171,10 @@
 
     
 <script>
+let timeLimit = 600000;
+const startTime = Date.now();
+
+
   
 let numCount = 0;
 const numQuestions = 10;
@@ -196,7 +200,8 @@ const numQuestions = 10;
   
  document.getElementById("quiz").addEventListener("submit", function(event) {
    event.preventDefault();
-
+   const timePassed = Date.now() - startTime;
+const timeRemaining = timeLimit - timePassed;
 numCount = 0;
 
    //This goes over each question to give you the number of questions you got correct
@@ -238,12 +243,13 @@ for (let question in quizAnswers) {
    document.getElementById("result").innerHTML = `You got ${numCount} right and ${numQuestions - numCount} questions wrong!`;
    
    document.getElementById("result").innerHTML += `<br>This can also be seen as ${numCount} out of ${numQuestions}!`;
+
+   document.getElementById("result").innerHTML += `<br>You have ${timeRemaining / 1000} seconds left on the quiz.`;
  });
  
 
-
   
-setTimeout(timeMachine, 600000);
+setTimeout(timeMachine, timeLimit);
 function timeMachine() {
   
    document.getElementById("overTime").click();
@@ -254,3 +260,4 @@ function timeMachine() {
 
   </body>
 </html>
+
