@@ -199,12 +199,22 @@ const numQuestions = 10;
   startTime = Date.now();
   clearTimeout(quizTimer);
   quizTimer = setTimeout(timeMachine, timeLimit);
+
+  
 });
   
  document.getElementById("quiz").addEventListener("submit", function(event) {
    event.preventDefault();
+   
    const timePassed = Date.now() - startTime;
 const timeRemaining = timeLimit - timePassed;
+   
+   const allInputs = document.querySelectorAll("#quiz input");
+   allInputs.forEach(function(input) {
+    if (input.type !== "reset") {
+      input.disabled = true;
+    }
+   });
 numCount = 0;
 
    //This goes over each question to give you the number of questions you got correct
