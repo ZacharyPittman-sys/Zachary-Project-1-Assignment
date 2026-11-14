@@ -260,6 +260,9 @@ const feedbackEl = anyInput.closest(".question").querySelector(".feedback");
     const textInput = document.querySelector(`input[name="${question}"]`);
     if (textInput && textInput.value.trim().toLowerCase() === correctAnswer.toLowerCase()) {
       numCount += points;
+      feedbackEl.textContent = "You got it Right!";
+    } else {
+      feedbackEl.textContent = `You got it Wrong! The answer was ${correctAnswer}.`;
     }
   } 
   
