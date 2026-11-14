@@ -235,9 +235,12 @@ numCount = 0;
    //This goes over each question to give you the number of questions you got correct
 
 for (let question in quizAnswers) {
-      const selected = document.querySelector(`input[name="${question}"]:checked`);
-
-
+const selected = document.querySelector(`input[name="${question}"]:checked`);
+const correctAnswer = quizAnswers[question].correct;
+const points = quizAnswers[question].points; 
+const anyInput = document.querySelector(`input[name="${question}"]`);
+const feedbackEl = anyInput.closest(".question").querySelector(".feedback");
+  
     if (!Array.isArray(correctAnswer) && !document.querySelector(`input[name="${question}"][type="text"]`)) {
       if (selected && selected.value === quizAnswers[question].correct) {
         numCount += quizAnswers[question].points;
@@ -248,8 +251,6 @@ for (let question in quizAnswers) {
     }
 
   
-       const correctAnswer = quizAnswers[question].correct;
- const points = quizAnswers[question].points;  
 
 // question 8 and 9 part
     if (document.querySelector(`input[name="${question}"][type="text"]`)) {
