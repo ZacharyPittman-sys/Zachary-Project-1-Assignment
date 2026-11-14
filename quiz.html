@@ -243,9 +243,9 @@ for (let question in quizAnswers) {
   
     }
    if (numCount > 5) {
-   document.getElementById("result").innerHTML = `You pass!`;
+   document.getElementById("result").innerHTML = `<span class="pass-color">You pass!</span>`;
    } else {
-   document.getElementById("result").innerHTML = `You failed!`;
+   document.getElementById("result").innerHTML = `<span class="fail-color">You failed!</span>`;
    }
    document.getElementById("result").innerHTML += `<br>You got ${numCount} right and ${numQuestions - numCount} questions wrong!`;
    
