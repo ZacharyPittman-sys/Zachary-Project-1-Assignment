@@ -63,3 +63,11 @@ a.bottom {
 color: black;
 font-decoration: none;
 }
+
+.pass-color {
+  color: green;
+}
+
+.fail-color {
+  color: red;
+}
