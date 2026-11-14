@@ -233,12 +233,17 @@ for (let question in quizAnswers) {
   } 
     }
    
-   document.getElementById("result").textContent = `You got ${numCount} out of ${numQuestions} questions correct!`;
+   document.getElementById("result").textContent = `You got ${numCount} right and ${numQuestions - numCount} questions wrong!`;
+   <br>
+   document.getElementById("result").textContent = `This can also be seen as ${numCount} out of ${numQuestions}!`;
  });
  
 
+
+  
 setTimeout(timeMachine, 600000);
 function timeMachine() {
+  
    document.getElementById("overTime").click();
 }
 
