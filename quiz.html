@@ -183,7 +183,7 @@ const numQuestions = 10;
     dns_Creation: { correct: "Dr. Paul Mockapetris2", points: 1 },
     blank: { correct: "World Wide Web", points: 1 },
     blanks: { correct: "Domain Name System", points: 1 },
-    timjob: { correct: "wwworg" && "web_trust", points: 1}
+    timjob: { correct: ["wwworg", "web_trust"], points: 1}
     
   };
   
@@ -193,13 +193,36 @@ const numQuestions = 10;
 numCount = 0;
 
    //This goes over each question to give you the number of questions you got correct
-   
+
 for (let question in quizAnswers) {
       const selected = document.querySelector(`input[name="${question}"]:checked`);
 
       if (selected && selected.value === quizAnswers[question].correct) {
         numCount += quizAnswers[question].points;
       }
+
+       const correctAnswer = quizAnswers[question].correct;
+ const points = quizAnswers[question].points;  
+
+  // question 10 part
+ if (Array.isArray(correctAnswer)) {
+        const checkedBoxes = document.querySelectorAll(`input[name="${question}"]:checked`);
+        const userValues = Array.from(checkedBoxes).map(box => box.value);
+
+        const isAllCorrect =
+          userValues.length === correctAnswer.length &&
+          correctAnswer.every(ans => userValues.includes(ans));
+
+        if (isAllCorrect) {
+          numCount += points;
+        }
+      } 
+    if (document.querySelector(`input[name="${question}"][type="text"]`)) {
+    const textInput = document.querySelector(`input[name="${question}"]`);
+    if (textInput && textInput.value.trim().toLowerCase() === correctAnswer.toLowerCase()) {
+      numCount += points;
+    }
+  } 
     }
    
    document.getElementById("result").textContent = `You scored ${numCount} out of ${numQuestions}!`;
