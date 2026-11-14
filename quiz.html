@@ -197,7 +197,7 @@ const numQuestions = 10;
   numCount = 0;
   document.getElementById("result").textContent = "";
   startTime = Date.now();
-  clearTimeOut(quizTimer);
+  clearTimeout(quizTimer);
   quizTimer = setTimeout(timeMachine, timeLimit);
 });
   
@@ -242,8 +242,12 @@ for (let question in quizAnswers) {
       } 
   
     }
-   
-   document.getElementById("result").innerHTML = `You got ${numCount} right and ${numQuestions - numCount} questions wrong!`;
+   if (numCount > 5) {
+   document.getElementById("result").innerHTML = `You pass!`;
+   } else {
+   document.getElementById("result").innerHTML = `You failed!`;
+   }
+   document.getElementById("result").innerHTML += `<br>You got ${numCount} right and ${numQuestions - numCount} questions wrong!`;
    
    document.getElementById("result").innerHTML += `<br>This can also be seen as ${numCount} out of ${numQuestions}!`;
 
