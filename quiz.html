@@ -235,9 +235,9 @@ for (let question in quizAnswers) {
   
     }
    
-   document.getElementById("result").textContent = `You got ${numCount} right and ${numQuestions - numCount} questions wrong!`;
-   <br>
-   document.getElementById("result").textContent = `This can also be seen as ${numCount} out of ${numQuestions}!`;
+   document.getElementById("result").innerHTML = `You got ${numCount} right and ${numQuestions - numCount} questions wrong!`;
+   
+   document.getElementById("result").innerHTML += `<br>This can also be seen as ${numCount} out of ${numQuestions}!`;
  });
  
 
