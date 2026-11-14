@@ -215,6 +215,9 @@ const numQuestions = 10;
   document.querySelectorAll("#quiz input").forEach(function(input) {
     input.disabled = false;
   });
+    document.querySelectorAll(".feedback").forEach(function(el) {
+      el.textContent = "";
+    });
 });
   // This goes over the submit button and stops the timer as well as showing the remaining time and the time that passed since you begun.
  document.getElementById("quiz").addEventListener("submit", function(event) {
