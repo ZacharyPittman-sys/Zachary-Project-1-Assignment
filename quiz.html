@@ -277,6 +277,9 @@ const feedbackEl = anyInput.closest(".question").querySelector(".feedback");
 
         if (isAllCorrect) {
           numCount += points;
+          feedbackEl.textContent = "You got it Right!";
+        } else {
+          feedbackEl.textContent = "You got it Wrong! The answer is World Wide Web Consortium and Web Science Trust.";
         }
       } 
   
