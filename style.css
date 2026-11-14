@@ -77,12 +77,18 @@ text-decoration: none;
 .section {
 font-weight: bold;
 font-style: italic;
-color: cyan;
+color: color: #006680;
 }
 
 .readText {
+font-family: Arial, Helvetica, sans-serif;
 max-width: 800px;
 padding: 0 20px;
 line-height: 1.6;
 margin: 0 auto;
+}
+
+.question {
+  margin-bottom: 16px;
+  padding: 12px 16px;
 }
