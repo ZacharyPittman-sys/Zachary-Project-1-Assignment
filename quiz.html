@@ -219,8 +219,8 @@ const numQuestions = 10;
   document.querySelectorAll("#quiz input").forEach(function(input) {
     input.disabled = false;
   });
-    document.querySelectorAll(".feedback").forEach(function(el) {
-      el.textContent = "";
+    document.querySelectorAll(".feedback").forEach(function(b) {
+      b.textContent = "";
     });
 });
   // This goes over the submit button and stops the timer as well as showing the remaining time and the time that passed since you begun.
@@ -246,14 +246,14 @@ const selected = document.querySelector(`input[name="${question}"]:checked`);
 const correctAnswer = quizAnswers[question].correct;
 const points = quizAnswers[question].points; 
 const anyInput = document.querySelector(`input[name="${question}"]`);
-const feedbackEl = anyInput.closest(".question").querySelector(".feedback");
+const feedbackb = anyInput.closest(".question").querySelector(".feedback");
   
     if (!Array.isArray(correctAnswer) && !document.querySelector(`input[name="${question}"][type="text"]`)) {
       if (selected && selected.value === quizAnswers[question].correct) {
         numCount += quizAnswers[question].points;
-        feedbackEl.innerHTML = `<span class="pass-color">You got it Right!</span>`;
+        feedbackb.innerHTML = `<span class="pass-color">You got it Right!</span>`;
       } else {
-        feedbackEl.innerHTML = `<span class="fail-color">You got it Wrong! The answer was ${correctAnswer}.</span>`;
+        feedbackb.innerHTML = `<span class="fail-color">You got it Wrong! The answer was ${correctAnswer}.</span>`;
     }
     }
 
@@ -264,9 +264,9 @@ const feedbackEl = anyInput.closest(".question").querySelector(".feedback");
     const textInput = document.querySelector(`input[name="${question}"]`);
     if (textInput && textInput.value.trim().toLowerCase() === correctAnswer.toLowerCase()) {
       numCount += points;
-       feedbackEl.innerHTML = `<span class="pass-color">You got it Right!</span>`;
+       feedbackb.innerHTML = `<span class="pass-color">You got it Right!</span>`;
     } else {
-      feedbackEl.innerHTML = `<span class="fail-color">You got it Wrong! The answer was ${correctAnswer}.</span>`;
+      feedbackb.innerHTML = `<span class="fail-color">You got it Wrong! The answer was ${correctAnswer}.</span>`;
     }
   } 
   
@@ -281,9 +281,9 @@ const feedbackEl = anyInput.closest(".question").querySelector(".feedback");
 
         if (isAllCorrect) {
           numCount += points;
-           feedbackEl.innerHTML = `<span class="pass-color">You got it Right!</span>`;
+           feedbackb.innerHTML = `<span class="pass-color">You got it Right!</span>`;
         } else {
-          feedbackEl.innerHTML = `<span class="fail-color">You got it Wrong! The answer is World Wide Web Consortium and Web Science Trust.</span>`;
+          feedbackb.innerHTML = `<span class="fail-color">You got it Wrong! The answer is World Wide Web Consortium and Web Science Trust.</span>`;
         }
       } 
   
@@ -294,6 +294,7 @@ const feedbackEl = anyInput.closest(".question").querySelector(".feedback");
    } else {
    document.getElementById("result").innerHTML = `<span class="fail-color">You failed!</span>`;
    }
+   
    document.getElementById("result").innerHTML += `<br>You got ${numCount} right and ${numQuestions - numCount} questions wrong!`;
    
    document.getElementById("result").innerHTML += `<br>This can also be seen as ${numCount} out of ${numQuestions}!`;
